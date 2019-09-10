@@ -6,5 +6,10 @@
 
     handleRecordUpdated: function(cmp, evt, helper) {
 
+    },
+
+    doInit: function(cmp, evt, helper) {
+        //Get a template for contact
+        helper.getContactTemplate(cmp, evt);
     }
 })
