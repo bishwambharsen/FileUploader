@@ -1,6 +1,9 @@
 <aura:component implements="force:hasRecordId, flexipage:availableForRecordHome" controller="FileUploaderController">
-
+    <aura:attribute name="newContact" type="Object" />
+    <aura:attribute name="contactError" type="String" />
     <lightning:card title="Special File Uploader">
         <lightning:fileUpload label="Upload file(s)" name="fileUploader" multiple="true" accept="*" recordId="{!v.recordId}" onuploadfinished="{!c.handleUploadFinished}" />
     </lightning:card>
+    <force:recordData aura:id="forceRecordCmp" targetRecord="{!v.newContact}" targetError="{!v.contactError}" mode="EDIT" recordUpdated="{!c.handleRecordUpdated}" />
+
 </aura:component>
