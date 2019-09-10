@@ -1,5 +1,6 @@
 <aura:component implements="force:hasRecordId, flexipage:availableForRecordHome" controller="FileUploaderController">
-    <aura:attribute name="selectedRecordId" type="Id" />
 
-    <lightning:fileUpload label="Upload file(s)" name="fileUploader" multiple="true" accept="*" recordId="{!v.recordId}" onuploadfinished="{!c.handleUploadFinished}" />
+    <lightning:card title="Special File Uploader">
+        <lightning:fileUpload label="Upload file(s)" name="fileUploader" multiple="true" accept="*" recordId="{!v.recordId}" onuploadfinished="{!c.handleUploadFinished}" />
+    </lightning:card>
 </aura:component>
