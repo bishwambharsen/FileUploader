@@ -11,5 +11,9 @@
     doInit: function(cmp, evt, helper) {
         //Get a template for contact
         helper.getContactTemplate(cmp, evt);
+    },
+
+    handleUploadError: function(cmp, evt, helper) {
+        console.log('Error: ', JSON.stringify(event.getParams()));
     }
 })
