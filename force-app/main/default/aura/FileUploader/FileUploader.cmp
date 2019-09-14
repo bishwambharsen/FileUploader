@@ -5,7 +5,7 @@
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 
     <lightning:card title="Special File Uploader">
-        <lightning:fileUpload label="Upload file(s)" onerror="{!c.handleUploadError}" name="fileUploader" multiple="true" recordId="{!v.recordId}" onuploadfinished="{!c.handleUploadFinished}" />
+        <lightning:fileUpload label="Upload file(s)" onuploaderror="{!c.handleUploadError}" name="fileUploader" multiple="true" recordId="{!v.recordId}" onuploadfinished="{!c.handleUploadFinished}" />
     </lightning:card>
     <force:recordData aura:id="forceRecordCmp" layoutType="FULL" targetRecord="{!v.newContact}" targetError="{!v.contactError}" mode="EDIT" recordUpdated="{!c.handleRecordUpdated}" />
 
